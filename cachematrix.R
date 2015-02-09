@@ -32,7 +32,6 @@ makeCacheMatrix <- function(x = matrix()) {
 # (and the matrix has not changed), then the cachesolve should retrieve the 
 # inverse from the cache.
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
         
         # Get the cached inverted matrix
         inverseMatrix <- x$getinverse()
@@ -49,6 +48,6 @@ cacheSolve <- function(x, ...) {
         inverseMatrix <- solve(data, ...)
         # Save the result in cache
         x$setinverse(inverseMatrix)
-        # return the cached inverted matrix
+        # Return a matrix that is the inverse of 'x'
         inverseMatrix
 }
